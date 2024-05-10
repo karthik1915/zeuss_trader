@@ -5,10 +5,10 @@ import ServiceCardList from "@/app/constants/serviceCardList";
 function Services(): React.ReactElement {
   return (
     <div className="my-10" id="services">
-      <p className="font-RobotoSlab text-3xl my-5 px-5 text-center sm:text-4xl font-semibold">
+      <p className="my-5 px-5 text-center font-RobotoSlab text-3xl font-semibold sm:text-4xl">
         Services
       </p>
-      <div className="grid grid-rows-2 md:grid-cols-3 grid-cols-2">
+      <div className="grid grid-cols-2 grid-rows-2 md:grid-cols-3">
         {ServiceCardList.map((service) => {
           return (
             <ServiceCard
@@ -35,7 +35,7 @@ const ServiceCard = ({
   content,
 }: ServiceCardProps): React.ReactElement => {
   return (
-    <div className="relative h-[200px] sm:h-[320px] mx-2 my-3 rounded-xl overflow-hidden">
+    <div className="relative mx-2 my-3 h-[200px] overflow-hidden rounded-xl sm:h-[320px]">
       <div className="absolute inset-0 bg-black"></div>
       {/* Black overlay */}
       <Image
@@ -51,11 +51,11 @@ const ServiceCard = ({
         height={200}
       />
       <div className="absolute inset-0 p-1">
-        <div className="flex flex-col justify-evenly h-full sm:px-3 ">
-          <p className="text-md font-semibold sm:text-xl text-white">
+        <div className="flex h-full flex-col justify-evenly sm:px-3 ">
+          <p className="text-md font-semibold text-white sm:text-xl">
             {heading}
           </p>
-          <p className="text-xs opacity-85 sm:text-lg text-white overflow-ellipsis">
+          <p className="overflow-ellipsis text-xs text-white opacity-85 sm:text-lg">
             {content}
           </p>
         </div>

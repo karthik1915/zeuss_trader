@@ -6,7 +6,7 @@ interface AboutProps {}
 function AboutUs({}: AboutProps): React.ReactElement {
   return (
     <div className="my-10" id="about">
-      <p className="font-RobotoSlab text-3xl my-5 px-5 text-center sm:text-4xl font-semibold">
+      <p className="my-5 px-5 text-center font-RobotoSlab text-3xl font-semibold sm:text-4xl">
         About Us
       </p>
       <div className="flex justify-center">

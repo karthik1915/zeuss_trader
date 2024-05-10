@@ -10,19 +10,19 @@ interface NavBarProps {
 
 function NavBar({ children }: NavBarProps): React.ReactElement {
   return (
-    <div className="fixed top-0 w-screen flex justify-center z-50 bg-black">
-      <div className="flex justify-between items-center p-3 w-full max-w-7xl">
+    <div className="fixed top-0 z-50 flex w-screen justify-center bg-black">
+      <div className="flex w-full max-w-7xl items-center justify-between p-3">
         <div>
           <Link href="/">
             <Image src="/logo.svg" alt="logo" width={35} height={35} />
           </Link>
         </div>
         <SlidingMenu />
-        <div className="sm:flex justify-between items-center gap-6 hidden">
+        <div className="hidden items-center justify-between gap-6 sm:flex">
           {children.map((child) => {
             return (
               <button
-                className="hover:text-orange-400 text-xl "
+                className="text-xl hover:text-orange-400 "
                 onClick={() => {
                   const element = document.querySelector(child[0]);
                   element?.scrollIntoView({ behavior: "smooth" });
@@ -80,7 +80,7 @@ function SlidingMenu() {
             animate={{ x: 0 }}
             exit={{ x: "-100vw" }}
             transition={{ duration: 0.5 }}
-            className="fixed flex flex-col items-center top-0 left-0 w-[70vw] h-full bg-gray-200 z-40"
+            className="fixed left-0 top-0 z-40 flex h-full w-[70vw] flex-col items-center bg-gray-200"
           >
             <Image
               src="/logotext.png"
@@ -88,7 +88,7 @@ function SlidingMenu() {
               height={50}
               alt="Zeuss Trader"
             />
-            <div className="flex flex-col text-xl text-black gap-6">
+            <div className="flex flex-col gap-6 text-xl text-black">
               <button onClick={() => scrollTo("#home")}>HOME</button>
               <button onClick={() => scrollTo("#about")}>ABOUT US</button>
               <button onClick={() => scrollTo("#services")}>SERVICES</button>

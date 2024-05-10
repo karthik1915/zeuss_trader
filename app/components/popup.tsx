@@ -14,7 +14,7 @@ export const EnquireButton = (): React.ReactElement => {
     <>
       <button
         onClick={togglePopup}
-        className="w-52 sm:text-lg font-semibold py-4 rounded-lg bg-blue-400 text-black hover:bg-black hover:text-white border border-blue-400"
+        className="w-52 rounded-lg border border-blue-400 bg-blue-400 py-4 font-semibold text-black hover:bg-black hover:text-white sm:text-lg"
       >
         Enquire Now
       </button>
@@ -38,21 +38,21 @@ function Popup({
 }): React.ReactElement {
   return (
     <div
-      className={`fixed inset-0 flex items-center justify-center z-50 ${
+      className={`fixed inset-0 z-50 flex items-center justify-center ${
         isOpen ? "" : "hidden"
       }`}
     >
       {/* Background overlay */}
       <div
-        className="transition-opacity duration-300 fixed inset-0 bg-black bg-opacity-50"
+        className="fixed inset-0 bg-black bg-opacity-50 transition-opacity duration-300"
         onClick={togglePopup}
       ></div>
       {/* Popup content */}
-      <div className="transition-transform duration-300 transform w-80 sm:w-[500px] sm:h-auto w- h-auto bg-white rounded-lg shadow-lg">
+      <div className="w- h-auto w-80 transform rounded-lg bg-white shadow-lg transition-transform duration-300 sm:h-auto sm:w-[500px]">
         {children}
         <button
           onClick={togglePopup}
-          className=" absolute top-0 right-4 mt-4 p-2 rounded-md  focus:outline-none"
+          className=" absolute right-4 top-0 mt-4 rounded-md p-2  focus:outline-none"
         >
           <CrossIcon width={12} height={12} fill="gray" />
         </button>

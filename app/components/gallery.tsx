@@ -15,15 +15,15 @@ function Gallery({}: GalleryProps): React.ReactElement {
         width={500}
         height={500}
         className="mx-auto rounded-xl"
-      />
+      />,
     );
   }
   return (
     <div className="my-10" id="gallery">
-      <p className="font-RobotoSlab text-3xl my-5 px-5 text-center sm:text-4xl font-semibold">
+      <p className="my-5 px-5 text-center font-RobotoSlab text-3xl font-semibold sm:text-4xl">
         Gallery
       </p>
-      <div className="grid grid-rows-3 grid-cols-2 gap-3">{images}</div>
+      <div className="grid grid-cols-2 grid-rows-3 gap-3">{images}</div>
     </div>
   );
 }

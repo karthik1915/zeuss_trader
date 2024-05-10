@@ -1,7 +1,7 @@
 import { SVGProps } from "react";
 
 export const CrossIcon = (
-  props: SVGProps<SVGSVGElement>
+  props: SVGProps<SVGSVGElement>,
 ): React.ReactElement => (
   <svg
     width={props.width}

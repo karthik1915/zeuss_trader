@@ -2,33 +2,33 @@ import React from "react";
 
 export function EnquiryForm(): React.ReactElement {
   return (
-    <div className="text-black flex flex-col justify-between p-4">
-      <p className="text-xl md:text-2xl text-center my-3">Send Enquiry</p>
+    <div className="flex flex-col justify-between p-4 text-black">
+      <p className="my-3 text-center text-xl md:text-2xl">Send Enquiry</p>
       <label>
-        <span className="text-gray-600 text-sm sm:text-lg">Name</span>
+        <span className="text-sm text-gray-600 sm:text-lg">Name</span>
       </label>
       <input
         type="text"
-        className="border py-1 px-4 rounded-lg mb-3 text-lg"
+        className="mb-3 rounded-lg border px-4 py-1 text-lg"
         placeholder=""
       />
       <label>
-        <span className="text-gray-600 text-sm sm:text-lg">Email</span>
+        <span className="text-sm text-gray-600 sm:text-lg">Email</span>
       </label>
       <input
         type="email"
-        className="border py-1 px-4 rounded-lg mb-3 text-lg"
+        className="mb-3 rounded-lg border px-4 py-1 text-lg"
         placeholder=""
       />
       <label>
-        <span className="text-gray-600 text-sm  sm:text-lg">Message</span>
+        <span className="text-sm text-gray-600  sm:text-lg">Message</span>
       </label>
       <textarea
         rows={5}
-        className="border py-1 px-4 rounded-lg text-lg"
+        className="rounded-lg border px-4 py-1 text-lg"
         placeholder=""
       />
-      <button className="px-4 py-2 bg-purple-500 my-3 rounded-xl text-white hover:bg-purple-800">
+      <button className="my-3 rounded-xl bg-purple-500 px-4 py-2 text-white hover:bg-purple-800">
         Submit
       </button>
     </div>
@@ -38,33 +38,33 @@ export function EnquiryForm(): React.ReactElement {
 export const ContactForm = () => {
   return (
     <>
-      <div className="w-full h-auto  mt-8 grid md:grid-cols-2 grid-col-1 gap-y-3">
-        <div className="px-5 flex flex-col justify-between gap-3">
+      <div className="grid-col-1 mt-8  grid h-auto w-full gap-y-3 md:grid-cols-2">
+        <div className="flex flex-col justify-between gap-3 px-5">
           <input
             type="text"
             placeholder="Name"
-            className="w-full py-3 outline-none bg-zinc-300 px-4 rounded-lg"
+            className="w-full rounded-lg bg-zinc-300 px-4 py-3 outline-none"
           />
           <input
             type="text"
             placeholder="Mobile Number"
-            className="w-full py-3 outline-none bg-zinc-300 px-4 rounded-lg"
+            className="w-full rounded-lg bg-zinc-300 px-4 py-3 outline-none"
           />
           <input
             type="text"
             placeholder="Email Address"
-            className="w-full py-3 outline-none bg-zinc-300 px-4 rounded-lg"
+            className="w-full rounded-lg bg-zinc-300 px-4 py-3 outline-none"
           />
         </div>
         <div className="px-5">
           <textarea
-            className="h-32 md:h-full w-full outline-none py-3 px-4 bg-zinc-300  rounded-lg z-10 resize-none"
+            className="z-10 h-32 w-full resize-none rounded-lg bg-zinc-300 px-4  py-3 outline-none md:h-full"
             placeholder="Message"
           />
         </div>
       </div>
       <div className="flex justify-center">
-        <button className=" px-12 py-2 bg-orange-500 my-3 rounded-xl text-black  hover:bg-orange-800">
+        <button className=" my-3 rounded-xl bg-orange-500 px-12 py-2 text-black  hover:bg-orange-800">
           Submit
         </button>
       </div>

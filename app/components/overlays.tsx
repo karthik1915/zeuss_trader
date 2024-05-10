@@ -20,20 +20,20 @@ function ContactOverlay(): React.ReactElement {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -50 }}
             transition={{ duration: 0.3 }}
-            className="absolute  bottom-8 grid grid-cols-[100px,1fr] sm:right-8 right-0 bg-white w-72 rounded-xl shadow-xl"
+            className="absolute  bottom-8 right-0 grid w-72 grid-cols-[100px,1fr] rounded-xl bg-white shadow-xl sm:right-8"
           >
-            <div className="bg-orange-500 w-full rounded-s-xl flex justify-center items-center">
+            <div className="flex w-full items-center justify-center rounded-s-xl bg-orange-500">
               <Support width={40} height={40} fill="black" />
             </div>
             <div className="flex flex-col p-3">
-              <h2 className="text-lg font-semibold mb-2">Contact Us</h2>
-              <p className="text-sm text-gray-600 mb-3">+91 1234567890</p>
-              <h2 className="text-lg font-semibold mb-2">Mail Us</h2>
-              <p className="text-sm text-gray-600 mb-3">example@gmail.com</p>
+              <h2 className="mb-2 text-lg font-semibold">Contact Us</h2>
+              <p className="mb-3 text-sm text-gray-600">+91 1234567890</p>
+              <h2 className="mb-2 text-lg font-semibold">Mail Us</h2>
+              <p className="mb-3 text-sm text-gray-600">example@gmail.com</p>
             </div>
             <button
               onClick={toggleCard}
-              className="bg-orange-500 text-white p-2 -top-2 -right-2 rounded-full hover:bg-orange-600 absolute"
+              className="absolute -right-2 -top-2 rounded-full bg-orange-500 p-2 text-white hover:bg-orange-600"
             >
               <CrossIcon width={12} height={12} fill="white" />
             </button>
@@ -44,7 +44,7 @@ function ContactOverlay(): React.ReactElement {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -50 }}
             transition={{ duration: 0.3 }}
-            className="bg-orange-500 p-2.5 rounded-full"
+            className="rounded-full bg-orange-500 p-2.5"
             onClick={toggleCard}
           >
             {/* Replace with your Support icon */}
@@ -59,7 +59,7 @@ function ContactOverlay(): React.ReactElement {
 export const WhatsAppOverlay = () => {
   return (
     <button
-      className="bg-green-500 p-3.5 rounded-full fixed bottom-6 right-24"
+      className="fixed bottom-6 right-24 rounded-full bg-green-500 p-3.5"
       onClick={() => {}}
     >
       <WhatsappIcon width={24} height={24} fill="white" />

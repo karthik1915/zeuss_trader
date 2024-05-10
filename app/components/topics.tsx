@@ -11,14 +11,14 @@ function Courses(): React.ReactElement {
 
   return (
     <div className="my-10">
-      <p className="font-RobotoSlab text-3xl my-5 px-5 text-center sm:text-4xl font-semibold">
+      <p className="my-5 px-5 text-center font-RobotoSlab text-3xl font-semibold sm:text-4xl">
         Courses
       </p>
-      <div className="lg:flex items-center justify-center">
-        <div className="mx-4 lg:mx-0 flex flex-col justify-center w-auto h-auto md:min-w-[700px] min-h-[300px] p-5 rounded-2xl bg-yellow-500">
+      <div className="items-center justify-center lg:flex">
+        <div className="mx-4 flex h-auto min-h-[300px] w-auto flex-col justify-center rounded-2xl bg-yellow-500 p-5 md:min-w-[700px] lg:mx-0">
           <p className="text-xl font-bold">{currentCourse?.title}</p>
           <p className="my-2">Duration : {currentCourse?.subtitle}</p>
-          <div className="h-[1px] my-3 bg-black"></div>
+          <div className="my-3 h-[1px] bg-black"></div>
           <div className="grid grid-cols-2">
             {currentCourse?.point.map((point, index) => {
               return (
@@ -32,9 +32,9 @@ function Courses(): React.ReactElement {
             })}
           </div>
         </div>
-        <div className="mx-4 lg:mx-0 flex justify-center lg:block mt-5 w-auto h-auto">
+        <div className="mx-4 mt-5 flex h-auto w-auto justify-center lg:mx-0 lg:block">
           <div
-            className={`px-5 lg:px-12 w-32 lg:w-auto py-4 cursor-pointer text-center ${
+            className={`w-32 cursor-pointer px-5 py-4 text-center lg:w-auto lg:px-12 ${
               topic === "Beginner"
                 ? "bg-blue-950 text-yellow-500"
                 : " bg-zinc-200"
@@ -44,7 +44,7 @@ function Courses(): React.ReactElement {
             Beginner
           </div>
           <div
-            className={`px-5 lg:px-12  w-32 lg:w-auto  py-4 cursor-pointer text-center ${
+            className={`w-32 cursor-pointer  px-5 py-4  text-center lg:w-auto lg:px-12 ${
               topic === "Intermediate"
                 ? "bg-blue-950 text-yellow-500"
                 : " bg-zinc-200"
@@ -54,7 +54,7 @@ function Courses(): React.ReactElement {
             Intermediate
           </div>
           <div
-            className={`px-5 lg:px-12  w-32 lg:w-auto  py-4 cursor-pointer text-center ${
+            className={`w-32 cursor-pointer  px-5 py-4  text-center lg:w-auto lg:px-12 ${
               topic === "Advanced"
                 ? "bg-blue-950 text-yellow-500"
                 : " bg-zinc-200"

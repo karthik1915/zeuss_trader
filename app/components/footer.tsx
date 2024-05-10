@@ -9,8 +9,8 @@ function Footer(): React.ReactElement {
   };
 
   return (
-    <footer className="w-screen h-auto pt-5 flex flex-col justify-between border-t border-black">
-      <div className="w-full h-auto grid md:grid-cols-4 grid-rows-2 grid-cols-2 md:grid-rows-1 gap-y-3">
+    <footer className="flex h-auto w-screen flex-col justify-between border-t border-black pt-5">
+      <div className="grid h-auto w-full grid-cols-2 grid-rows-2 gap-y-3 md:grid-cols-4 md:grid-rows-1">
         <div className="flex flex-col items-center gap-2 ">
           <p className="text-lg font-bold">USEFUL LINKS</p>
           <Link href={"/privacy-policy"}>PRIVACY POLICY</Link>
@@ -34,7 +34,7 @@ function Footer(): React.ReactElement {
           <p className="text-lg font-bold">CONNECT</p>
         </div>
       </div>
-      <div className="w-full flex justify-center bg-orange-500 py-2 gap-4">
+      <div className="flex w-full justify-center gap-4 bg-orange-500 py-2">
         <p>&copy; Copyrights 2024</p>
         <p>ZEUSS TRADER</p>
         <p>All Rights Reserved</p>

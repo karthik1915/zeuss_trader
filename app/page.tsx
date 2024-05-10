@@ -23,15 +23,15 @@ export default function Home() {
     <main className="overflow-x-hidden font-VarelaRound">
       <div
         id="home"
-        className="w-screen h-[80vh] bg-no-repeat bg-center bg-cover text-white"
+        className="h-[80vh] w-screen bg-cover bg-center bg-no-repeat text-white"
         style={{ backgroundImage: "url('/background.png')" }}
       >
         <NavBar>{NavBarLinks}</NavBar>
-        <div className="w-screen max-w-7xl mx-auto h-full grid grid-rows-[70px,1fr]">
+        <div className="mx-auto grid h-full w-screen max-w-7xl grid-rows-[70px,1fr]">
           <HeroText />
         </div>
       </div>
-      <div className="w-full max-w-6xl mx-auto">
+      <div className="mx-auto w-full max-w-6xl">
         <Services />
         <AboutUs />
         <Courses />

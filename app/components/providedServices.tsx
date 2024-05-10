@@ -22,7 +22,7 @@ const flickityOptions = {
 function Carousel() {
   return (
     <>
-      <p className="font-RobotoSlab text-3xl my-5 px-5 text-center sm:text-4xl font-semibold">
+      <p className="my-5 px-5 text-center font-RobotoSlab text-3xl font-semibold sm:text-4xl">
         Topics
       </p>
       <Flickity
@@ -54,15 +54,15 @@ export interface ServiceCardProps {
 
 const ServicesCard = ({ logo, title }: ServiceCardProps) => {
   return (
-    <div className="w-52 bg-zinc-300 p-4 rounded-xl mx-2 h-40 grid grid-rows-[50px,1fr]">
+    <div className="mx-2 grid h-40 w-52 grid-rows-[50px,1fr] rounded-xl bg-zinc-300 p-4">
       <Image
         src={logo}
         alt={title}
         width={50}
         height={50}
-        className="p-3 bg-white rounded-full"
+        className="rounded-full bg-white p-3"
       />
-      <p className="font-bold flex items-center">{title}</p>
+      <p className="flex items-center font-bold">{title}</p>
     </div>
   );
 };
