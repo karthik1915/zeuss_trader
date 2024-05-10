@@ -1,0 +1,12 @@
+<svg width="800" height="800" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_233_64)">
+<path d="M650 250H600V150H550V250H500V550H550V650H600V550H650V250ZM600 500H550V300H600V500Z" fill="black"/>
+<path d="M350 200H300V100H250V200H200V450H250V550H300V450H350V200ZM300 400H250V250H300V400Z" fill="black"/>
+<path d="M750 750H100C86.7392 750 74.0215 744.732 64.6447 735.355C55.2678 725.979 50 713.261 50 700V50H100V700H750V750Z" fill="black"/>
+</g>
+<defs>
+<clipPath id="clip0_233_64">
+<rect width="800" height="800" fill="white"/>
+</clipPath>
+</defs>
+</svg>
