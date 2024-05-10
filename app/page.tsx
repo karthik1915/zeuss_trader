@@ -14,7 +14,7 @@ const NavBarLinks: [string, string][] = [
   ["#services", "Services"],
   ["#about", "About Us"],
   ["#gallery", "Gallery"],
-  ["#testimonials", "Testimonials"],
+  ["#blogs", "Blogs"],
   ["#contact", "Contact"],
 ];
 

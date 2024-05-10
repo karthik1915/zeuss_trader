@@ -4,8 +4,13 @@ import Popup, { EnquireButton } from "./popup";
 function HeroText(): React.ReactElement {
   return (
     <div className="row-span-2 flex h-full flex-col justify-center gap-5 p-5">
-      <p className="w-full text-center font-RobotoSlab text-5xl font-semibold leading-relaxed sm:w-3/4 sm:text-left">
-        Available Trading for Wide Trade
+      <p className="w-full text-center font-RobotoSlab text-3xl font-semibold leading-relaxed sm:w-3/4 sm:text-left md:text-5xl">
+        Unleash Your Trading Superpowers
+      </p>
+      <p className="w-full text-center font-RobotoSlab text-3xl font-semibold leading-relaxed sm:w-3/4 sm:text-left md:text-5xl">
+        Conquer the Markets with &nbsp;
+        <span className="text-[#99ff00]">Zeuss </span>&nbsp;
+        <span className="text-[#fc0106]">Trader </span>
       </p>
       <div className="flex justify-center gap-4 sm:justify-start">
         <div>

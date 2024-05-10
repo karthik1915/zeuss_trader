@@ -8,7 +8,7 @@ function Services(): React.ReactElement {
       <p className="my-5 px-5 text-center font-RobotoSlab text-3xl font-semibold sm:text-4xl">
         Services
       </p>
-      <div className="grid grid-cols-2 grid-rows-2 md:grid-cols-3">
+      <div className="grid grid-cols-2 grid-rows-2  md:grid-cols-3">
         {ServiceCardList.map((service) => {
           return (
             <ServiceCard
@@ -35,7 +35,7 @@ const ServiceCard = ({
   content,
 }: ServiceCardProps): React.ReactElement => {
   return (
-    <div className="relative mx-2 my-3 h-[200px] overflow-hidden rounded-xl sm:h-[320px]">
+    <div className=" relative mx-2 my-3 h-[200px] overflow-hidden rounded-xl hover:scale-105 hover:shadow-2xl sm:h-[320px]">
       <div className="absolute inset-0 bg-black"></div>
       {/* Black overlay */}
       <Image

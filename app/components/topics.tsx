@@ -3,10 +3,10 @@ import React, { useState } from "react";
 import CoursesList from "@/app/constants/courseTier";
 
 interface TopicsProps {}
-export type Topic = "Beginner" | "Intermediate" | "Advanced";
+export type Topic = "Beginner" | "Advanced";
 
 function Courses(): React.ReactElement {
-  const [topic, setTopic] = useState<Topic>("Intermediate");
+  const [topic, setTopic] = useState<Topic>("Beginner");
   const currentCourse = CoursesList.find((course) => course.tier === topic);
 
   return (
@@ -43,16 +43,7 @@ function Courses(): React.ReactElement {
           >
             Beginner
           </div>
-          <div
-            className={`w-32 cursor-pointer  px-5 py-4  text-center lg:w-auto lg:px-12 ${
-              topic === "Intermediate"
-                ? "bg-blue-950 text-yellow-500"
-                : " bg-zinc-200"
-            }`}
-            onClick={() => setTopic("Intermediate")}
-          >
-            Intermediate
-          </div>
+
           <div
             className={`w-32 cursor-pointer  px-5 py-4  text-center lg:w-auto lg:px-12 ${
               topic === "Advanced"

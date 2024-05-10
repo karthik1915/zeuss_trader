@@ -93,9 +93,7 @@ function SlidingMenu() {
               <button onClick={() => scrollTo("#about")}>ABOUT US</button>
               <button onClick={() => scrollTo("#services")}>SERVICES</button>
               <button onClick={() => scrollTo("#gallery")}>GALLERY</button>
-              <button onClick={() => scrollTo("#testimonials")}>
-                TESTIMONIALS
-              </button>
+              <button onClick={() => scrollTo("#blogs")}>blogs</button>
               <button onClick={() => scrollTo("#contact")}>CONTACT</button>
             </div>
           </motion.div>
