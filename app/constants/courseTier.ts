@@ -27,12 +27,6 @@ const CoursesList: CourseType[] = [
     ],
   },
   {
-    title: "Intermediate",
-    subtitle: "1 Month",
-    tier: "Intermediate",
-    point: [],
-  },
-  {
     title: "Master In Price Action - Trend & Direction-Based Analysis",
     subtitle: "1 Month",
     tier: "Advanced",
