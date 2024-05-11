@@ -1,8 +1,8 @@
-import { Topic } from "../components/topics";
+import { Courses } from ".";
 
 interface CourseType {
   title: string;
-  tier: Topic;
+  tier: Courses;
   subtitle: string;
   point: string[];
 }
@@ -17,12 +17,12 @@ const CoursesList: CourseType[] = [
       "Candlestick Mastery",
       "Chart Pattern Recognition",
       "Support & Resistance Analysis",
-      "Breakout & Breakdown Strategies",
       "Essential Indicators",
-      "Basic to Advance Futures & Options",
       "Option Greeks",
       "Commodity",
       "Risk Management",
+      "Breakout & Breakdown Strategies",
+      "Basic to Advance Futures & Options",
       "Share/Stock Market View & Investing Chart Practice",
     ],
   },
@@ -35,11 +35,11 @@ const CoursesList: CourseType[] = [
       "Price Action Analysis",
       "Risk Management Strategies",
       "Fibonacci Retracement",
-      "Swing, Momentum, and Positional Strategy",
       "Trend Analysis",
       "Advanced Indicators",
-      "Advanced Chart Patterns and Trap Analysis",
       "Multi-Time Frame Analysis",
+      "Swing, Momentum, and Positional Strategy",
+      "Advanced Chart Patterns and Trap Analysis",
     ],
   },
 ];

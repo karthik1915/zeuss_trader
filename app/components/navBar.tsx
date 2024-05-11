@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { MenuIcon } from "../constants/icons";
 import { AnimatePresence, motion } from "framer-motion";
+
 interface NavBarProps {
   children: [string, string][];
 }

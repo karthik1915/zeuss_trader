@@ -1,5 +1,5 @@
 import React from "react";
-import Popup, { EnquireButton } from "./popup";
+import { EnquireButton } from "./enquireButton";
 
 function HeroText(): React.ReactElement {
   return (

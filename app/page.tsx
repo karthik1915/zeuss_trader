@@ -1,13 +1,13 @@
 import NavBar from "@/app/components/navBar";
-import HeroText from "@/app/components/heroText";
+import HeroText from "@/app/components/herotext";
 import Services from "@/app/components/services";
 import AboutUs from "@/app/components/about";
-import Courses from "@/app/components/topics";
-import ProvidedServices from "@/app/components/providedServices";
+import Courses from "@/app/components/courses";
+import ProvidedServices from "@/app/components/topics";
 import Gallery from "@/app/components/gallery";
-import ContactOverlay, { WhatsAppOverlay } from "./components/overlays";
 import Contact from "./components/contact";
 import Footer from "./components/footer";
+import { ContactOverlay, WhatsAppOverlay } from "./components/overlays";
 
 const NavBarLinks: [string, string][] = [
   ["#home", "Home"],
@@ -24,7 +24,7 @@ export default function Home() {
       <div
         id="home"
         className="h-[80vh] w-screen bg-cover bg-center bg-no-repeat text-white"
-        style={{ backgroundImage: "url('/background.png')" }}
+        style={{ backgroundImage: "url('/background1.webp')" }}
       >
         <NavBar>{NavBarLinks}</NavBar>
         <div className="mx-auto grid h-full w-screen max-w-7xl grid-rows-[70px,1fr]">

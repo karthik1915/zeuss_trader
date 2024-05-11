@@ -34,7 +34,7 @@ function Footer(): React.ReactElement {
       </div>
       <div className="mx-auto flex w-full justify-center gap-4 border-t border-black px-4 pb-4 pt-5">
         <div className="max-w-5xl">
-          <p className="animate-pulse font-bold text-red-700">DISCLAIMER :</p>
+          <p className="font-bold text-red-700">DISCLAIMER :</p>
           <p className="sm:text-sm md:text-lg">
             The information provided on the Zeus Trader website is for
             educational and informational purposes only. We do not provide

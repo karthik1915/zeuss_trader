@@ -1,12 +1,12 @@
 "use client";
 import React, { useState } from "react";
-import CoursesList from "@/app/constants/courseTier";
+import CoursesList from "@/app/components/courses/courseList";
+import { CrossHairIcon } from "@/app/constants/icons";
 
-interface TopicsProps {}
-export type Topic = "Beginner" | "Advanced";
+export type Courses = "Beginner" | "Advanced";
 
 function Courses(): React.ReactElement {
-  const [topic, setTopic] = useState<Topic>("Beginner");
+  const [topic, setTopic] = useState<Courses>("Beginner");
   const currentCourse = CoursesList.find((course) => course.tier === topic);
 
   return (
@@ -19,15 +19,16 @@ function Courses(): React.ReactElement {
           <p className="text-xl font-bold">{currentCourse?.title}</p>
           <p className="my-2">Duration : {currentCourse?.subtitle}</p>
           <div className="my-3 h-[1px] bg-black"></div>
-          <div className="grid grid-cols-2">
+          <div className="grid grid-cols-2 grid-rows-6">
             {currentCourse?.point.map((point, index) => {
               return (
-                <li
-                  className="max-w-xs break-words text-sm md:text-lg"
+                <div
+                  className=" flex max-w-xs gap-1 break-words text-sm md:text-lg"
                   key={index}
                 >
+                  <CrossHairIcon />
                   {point}
-                </li>
+                </div>
               );
             })}
           </div>

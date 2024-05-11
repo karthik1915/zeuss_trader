@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import ServiceCardList from "@/app/constants/serviceCardList";
+import ServiceCardList from "@/app/components/services/serviceList";
 
 function Services(): React.ReactElement {
   return (
@@ -35,7 +35,7 @@ const ServiceCard = ({
   content,
 }: ServiceCardProps): React.ReactElement => {
   return (
-    <div className=" relative mx-2 my-3 h-[200px] overflow-hidden rounded-xl hover:scale-105 hover:shadow-2xl sm:h-[320px]">
+    <div className=" relative mx-2 my-3 h-[200px]  transform overflow-hidden rounded-xl transition  duration-300 ease-in-out hover:scale-105 hover:shadow-2xl sm:h-[320px]">
       <div className="absolute inset-0 bg-black"></div>
       {/* Black overlay */}
       <Image

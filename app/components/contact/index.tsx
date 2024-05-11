@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
-import ContactList, { ContactDetailProps } from "../constants/contactList";
+import ContactList, { ContactDetailProps } from "./contactList";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
-import { ContactForm } from "./forms";
+import ContactForm from "@/app/components/forms/contactForm";
 
 function Contact(): React.ReactElement {
   return (
@@ -13,6 +13,7 @@ function Contact(): React.ReactElement {
       </p>
       <div className="grid grid-rows-[400px,1fr] gap-y-3 px-3 lg:grid-cols-[600px,1fr] lg:grid-rows-1">
         <iframe
+          title="Google Maps Location"
           src="https://maps.google.com/maps?width=100%25&height=100%&hl=en&q=No.2/14,%20Bus%20Stand,%20Collector%20Nagar%20Rd,%20Radial%20Nagar,%20Anna%20Nagar%20West%20Extension,%20Chennai,%20Tamil%20Nadu%20600101%20+(Zeuss%20Trader)&t=&z=14&ie=UTF8&iwloc=B&output=embed"
           width="100%"
           height="100%"

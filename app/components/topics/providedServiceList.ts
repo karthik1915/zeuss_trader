@@ -1,6 +1,6 @@
-import { ServiceCardProps } from "@/app/components/providedServices";
+import { TopicsCaredProps } from "@/app/components/topics";
 
-const ProvidedServiceList: ServiceCardProps[] = [
+const ProvidedServiceList: TopicsCaredProps[] = [
   {
     title: "Basics of Stock Market",
     logo: "stocks.svg",

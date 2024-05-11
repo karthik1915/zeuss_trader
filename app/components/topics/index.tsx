@@ -1,10 +1,10 @@
 "use client";
 import Image from "next/image";
 import Flickity from "react-flickity-component";
-import ProvidedServiceList from "@/app/constants/providedServiceList";
+import ProvidedServiceList from "@/app/components/topics/providedServiceList";
 import React from "react";
 
-const ProvidedServices = (): React.ReactElement => {
+const Topics = (): React.ReactElement => {
   return (
     <div style={{ overflowX: "hidden" }}>
       <Carousel />
@@ -35,7 +35,7 @@ function Carousel() {
       >
         {ProvidedServiceList.map((service) => {
           return (
-            <ServicesCard
+            <TopicsCard
               key={service.title}
               title={service.title}
               logo={`/svg/${service.logo}`}
@@ -47,12 +47,12 @@ function Carousel() {
   );
 }
 
-export interface ServiceCardProps {
+export interface TopicsCaredProps {
   logo: string;
   title: string;
 }
 
-const ServicesCard = ({ logo, title }: ServiceCardProps) => {
+const TopicsCard = ({ logo, title }: TopicsCaredProps) => {
   return (
     <div className="mx-2 grid h-40 w-52 grid-rows-[50px,1fr] rounded-xl bg-zinc-300 p-4">
       <Image
@@ -67,4 +67,4 @@ const ServicesCard = ({ logo, title }: ServiceCardProps) => {
   );
 };
 
-export default ProvidedServices;
+export default Topics;

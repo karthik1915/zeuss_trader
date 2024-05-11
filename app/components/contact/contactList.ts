@@ -1,5 +1,10 @@
 import { JSXElementConstructor, SVGProps } from "react";
-import { CallIcon, LocationIcon, MailIcon, TimeIcon } from "./icons";
+import {
+  CallIcon,
+  LocationIcon,
+  MailIcon,
+  TimeIcon,
+} from "@/app/constants/icons";
 
 export interface ContactDetailProps {
   title: string;
