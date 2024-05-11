@@ -33,6 +33,7 @@ export function ContactOverlay(): React.ReactElement {
               </p>
             </div>
             <button
+              title="close"
               onClick={toggleCard}
               className="absolute -right-2 -top-2 rounded-full bg-orange-500 p-2 text-white hover:bg-orange-600"
             >

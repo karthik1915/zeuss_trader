@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/bundle-analyzer": "^14.2.3",
     "@types/flickity": "^2.2.11",
     "flickity": "2.3.0",
     "framer-motion": "^11.1.9",

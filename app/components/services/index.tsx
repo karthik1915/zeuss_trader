@@ -12,7 +12,7 @@ function Services(): React.ReactElement {
         {ServiceCardList.map((service) => {
           return (
             <ServiceCard
-              image={service.image}
+              image={`/services${service.image}`}
               key={service.title}
               heading={service.title}
               content={service.subtitle}
@@ -43,12 +43,9 @@ const ServiceCard = ({
         alt={heading}
         className="absolute inset-0 rounded-t-xl opacity-30"
         style={{
-          width: "100%",
-          height: "320px",
           objectFit: "cover",
         }}
-        width={500}
-        height={200}
+        fill
       />
       <div className="absolute inset-0 p-1">
         <div className="flex h-full flex-col justify-evenly sm:px-3 ">
