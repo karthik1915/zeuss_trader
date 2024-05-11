@@ -11,7 +11,7 @@ export function ContactOverlay(): React.ReactElement {
   };
 
   return (
-    <div className="fixed bottom-6 right-8">
+    <div className="fixed bottom-6 right-24">
       <AnimatePresence>
         {showCard ? (
           <motion.div

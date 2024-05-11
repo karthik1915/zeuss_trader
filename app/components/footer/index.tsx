@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
-import React from "react";
+import React, { JSXElementConstructor, SVGProps } from "react";
+import connectLinkList from "./connectLinks";
 
 function Footer(): React.ReactElement {
   const scrollTo = (link: string) => {
@@ -21,20 +22,40 @@ function Footer(): React.ReactElement {
         <div className="flex flex-col items-center gap-2">
           <button onClick={() => scrollTo("#home")}>HOME</button>
           <button onClick={() => scrollTo("#about")}>ABOUT US</button>
-          <button onClick={() => scrollTo("#blogs")}>BLOGS</button>
+          <button
+            onClick={() => {
+              window.location.href = "/blogs";
+            }}
+          >
+            BLOGS
+          </button>
         </div>
         <div className="flex flex-col items-center gap-2">
           <p className="text-lg font-bold">CONTACT</p>
-          <p>+91 8056054719</p>
+          <p>+91 6382980289</p>
+          <p>+91 8072285207</p>
           <p>zeusstrader@gmail.com</p>
         </div>
         <div className="flex flex-col items-center gap-2">
           <p className="text-lg font-bold">CONNECT</p>
+          <div className="flex gap-2">
+            {connectLinkList.map((list, index) => {
+              return (
+                <ConnectLink
+                  key={index}
+                  onClick={list.onClick}
+                  Icon={list.Icon}
+                />
+              );
+            })}
+          </div>
         </div>
       </div>
       <div className="mx-auto flex w-full justify-center gap-4 border-t border-black px-4 pb-4 pt-5">
         <div className="max-w-5xl">
-          <p className="font-bold text-red-700">DISCLAIMER :</p>
+          <p className=" animate-pulse text-xl font-bold text-red-700">
+            DISCLAIMER :
+          </p>
           <p className="sm:text-sm md:text-lg">
             The information provided on the Zeus Trader website is for
             educational and informational purposes only. We do not provide
@@ -56,5 +77,21 @@ function Footer(): React.ReactElement {
     </footer>
   );
 }
+
+export interface ConnectLinkType {
+  Icon: JSXElementConstructor<SVGProps<SVGSVGElement>>;
+  onClick: () => void;
+}
+
+const ConnectLink = ({ onClick, Icon }: ConnectLinkType) => {
+  return (
+    <button
+      onClick={onClick}
+      className="rounded-full bg-gray-300 p-1 hover:bg-gray-400"
+    >
+      <Icon fill="black" width={34} height={34} />
+    </button>
+  );
+};
 
 export default Footer;

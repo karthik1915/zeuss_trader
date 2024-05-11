@@ -20,7 +20,7 @@ export const EnquireButton = (): React.ReactElement => {
       </button>
       {open && (
         <Popup isOpen={open} togglePopup={togglePopup}>
-          <EnquiryForm />
+          <EnquiryForm closePopup={togglePopup} />
         </Popup>
       )}
     </>

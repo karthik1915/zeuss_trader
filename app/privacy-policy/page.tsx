@@ -1,9 +1,12 @@
 import React from "react";
-
+import Image from "next/image";
 function PrivaryPolicy() {
   return (
-    <div className="mx-auto w-screen max-w-5xl">
-      <p className="text-xl font-bold">Privacy Policy</p>
+    <div className="relative mx-auto my-6 w-screen max-w-5xl text-lg ">
+      <div className="flex w-full justify-center">
+        <Image src="/logotext.png" alt="logotext" width={300} height={200} />
+      </div>
+      <p className="my-3 text-center text-3xl font-bold">Privacy Policy</p>
       <p>
         Welcome to Zeuss Trader. This Privacy Policy explains how we collect,
         use, and safeguard your personal information. By using our website, you

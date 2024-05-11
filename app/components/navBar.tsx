@@ -25,8 +25,12 @@ function NavBar({ children }: NavBarProps): React.ReactElement {
               <button
                 className="text-xl hover:text-orange-400 "
                 onClick={() => {
-                  const element = document.querySelector(child[0]);
-                  element?.scrollIntoView({ behavior: "smooth" });
+                  if (child[0].startsWith("/")) {
+                    window.location.href = child[0];
+                  } else {
+                    const element = document.querySelector(child[0]);
+                    element?.scrollIntoView({ behavior: "smooth" });
+                  }
                 }}
                 key={child[1]}
               >
@@ -94,7 +98,13 @@ function SlidingMenu() {
               <button onClick={() => scrollTo("#about")}>ABOUT US</button>
               <button onClick={() => scrollTo("#services")}>SERVICES</button>
               <button onClick={() => scrollTo("#gallery")}>GALLERY</button>
-              <button onClick={() => scrollTo("#blogs")}>blogs</button>
+              <button
+                onClick={() => {
+                  window.location.href = "/blogs";
+                }}
+              >
+                BLOGS
+              </button>
               <button onClick={() => scrollTo("#contact")}>CONTACT</button>
             </div>
           </motion.div>

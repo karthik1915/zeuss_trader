@@ -14,13 +14,13 @@ const NavBarLinks: [string, string][] = [
   ["#services", "Services"],
   ["#about", "About Us"],
   ["#gallery", "Gallery"],
-  ["#blogs", "Blogs"],
+  ["/blogs", "Blogs"],
   ["#contact", "Contact"],
 ];
 
 export default function Home() {
   return (
-    <main className="overflow-x-hidden font-VarelaRound">
+    <main className="font-VarelaRound overflow-x-hidden">
       <div
         id="home"
         className="h-[80vh] w-screen bg-cover bg-center bg-no-repeat text-white"

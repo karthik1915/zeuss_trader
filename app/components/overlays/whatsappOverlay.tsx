@@ -15,7 +15,7 @@ export const WhatsAppOverlay = () => {
     <>
       <button
         title="Whatsapp"
-        className="fixed bottom-6 right-24 rounded-full bg-green-500 p-3.5"
+        className="fixed bottom-6 right-8 rounded-full bg-green-500 p-3.5"
         onClick={() => setopen(!open)}
       >
         {!open ? (

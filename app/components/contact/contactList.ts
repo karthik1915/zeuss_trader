@@ -26,7 +26,7 @@ const ContactList: ContactDetailProps[] = [
   },
   {
     title: "Call Us",
-    content: "+91 6382980289",
+    content: "+91 6382980289 , +91 8072285207",
     Icon: CallIcon,
   },
   {
