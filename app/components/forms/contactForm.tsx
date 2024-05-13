@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import SubmitContactForm, { ContactFormType } from "../api/submitContactForm";
 
 const ContactForm = (): React.ReactElement => {
+  const [loading, setLoading] = useState<boolean>(false);
+  const [res, setRes] = useState<"success" | "fail" | "unset">("unset");
+
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
@@ -19,9 +22,13 @@ const ContactForm = (): React.ReactElement => {
     };
 
     try {
-      event.currentTarget?.reset();
-      await SubmitContactForm(contactData);
+      await SubmitContactForm(contactData).then(() => {
+        setRes("success");
+        setLoading(false);
+      });
     } catch (error) {
+      setRes(`fail`);
+      setLoading(false);
       console.error("Error submitting form:", error);
     }
   };
@@ -35,18 +42,21 @@ const ContactForm = (): React.ReactElement => {
         <input
           type="text"
           name="name"
+          required
           placeholder="Name"
           className="w-full rounded-lg bg-zinc-300 px-4 py-3 outline-none"
         />
         <input
           type="text"
           name="phone"
+          required
           placeholder="Mobile Number"
           className="w-full rounded-lg bg-zinc-300 px-4 py-3 outline-none"
         />
         <input
           type="text"
           name="email"
+          required
           placeholder="Email Address"
           className="w-full rounded-lg bg-zinc-300 px-4 py-3 outline-none"
         />
@@ -54,6 +64,7 @@ const ContactForm = (): React.ReactElement => {
       <div className="px-5">
         <textarea
           name="message"
+          required
           className="z-10 h-32 w-full resize-none rounded-lg bg-zinc-300 px-4  py-3 outline-none md:h-full"
           placeholder="Message"
         />
@@ -61,9 +72,20 @@ const ContactForm = (): React.ReactElement => {
       <div className="flex justify-center md:col-span-2">
         <button
           type="submit"
-          className="my-3 rounded-xl bg-orange-500 px-12 py-2 text-black hover:bg-orange-800"
+          className={`my-3 rounded-xl 
+          ${
+            res === "unset"
+              ? "bg-orange-500  hover:bg-orange-800"
+              : res === "success"
+                ? "bg-green-600"
+                : "bg-red-600"
+          } px-12 py-2 text-black`}
         >
-          Submit
+          {res === "unset"
+            ? "Submit"
+            : res === "success"
+              ? "Successfully Submitted"
+              : "Failed to Submit Fomr"}
         </button>
       </div>
     </form>
