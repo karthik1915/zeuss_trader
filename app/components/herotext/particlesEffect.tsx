@@ -31,7 +31,6 @@ const App = () => {
     () => ({
       fullScreen: {
         enable: true,
-        zIndex: 20,
       },
       style: {
         position: "absolute",

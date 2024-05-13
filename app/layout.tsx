@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   ] as Author,
   openGraph: {
     title: "Zeuss Trader",
-    url: "https://zeuss-trader.in/",
+    url: "https://zeusstrader.in/",
     siteName: "Zeuss Trader",
     description:
       "Unleash Your Trading Superpowers: Conquer the Markets with Zeuss Trader",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     countryName: "India",
     images: ["/logotext.png"],
   },
-  metadataBase: new URL("https://zeuss-trader.in"),
+  metadataBase: new URL("https://zeusstrader.in"),
 };
 
 export default function RootLayout({

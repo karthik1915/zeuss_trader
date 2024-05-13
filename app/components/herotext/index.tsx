@@ -6,7 +6,7 @@ function HeroText(): React.ReactElement {
   return (
     <>
       <ParticlesEffect />
-      <div className="z-30 mx-auto grid h-full w-screen max-w-7xl grid-rows-[70px,1fr]">
+      <div className="mx-auto grid h-full w-screen max-w-7xl grid-rows-[70px,1fr]">
         <div className="row-span-2 flex h-full flex-col justify-center gap-5 p-5">
           <p className=" w-full text-center font-RobotoSlab text-3xl font-semibold leading-relaxed sm:w-3/4 sm:text-left md:text-5xl">
             Unleash Your Trading Superpowers
@@ -31,7 +31,7 @@ function HeroText(): React.ReactElement {
               <p className="text-lg sm:text-xl">4800+ markets</p>
             </div>
           </div>
-          <div className="flex  justify-center gap-2 sm:justify-start">
+          <div className="flex justify-center gap-2 sm:justify-start">
             <EnquireButton />
           </div>
         </div>

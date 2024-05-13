@@ -14,7 +14,7 @@ export const EnquireButton = (): React.ReactElement => {
     <>
       <button
         onClick={togglePopup}
-        className="w-52 rounded-lg border border-blue-400 bg-blue-400 py-4 font-semibold text-black hover:bg-black hover:text-white sm:text-lg"
+        className="z-[1] w-52 rounded-lg border border-blue-400 bg-blue-400 py-4 font-semibold text-black hover:bg-black hover:text-white sm:text-lg"
       >
         Enquire Now
       </button>
