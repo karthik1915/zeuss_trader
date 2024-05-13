@@ -27,9 +27,7 @@ export default function Home() {
         style={{ backgroundImage: "url('/background1.webp')" }}
       >
         <NavBar>{NavBarLinks}</NavBar>
-        <div className="mx-auto grid h-full w-screen max-w-7xl grid-rows-[70px,1fr]">
-          <HeroText />
-        </div>
+        <HeroText />
       </div>
       <div className="mx-auto w-full max-w-6xl">
         <Services />

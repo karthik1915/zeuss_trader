@@ -11,7 +11,7 @@ interface NavBarProps {
 
 function NavBar({ children }: NavBarProps): React.ReactElement {
   return (
-    <div className="fixed top-0 z-50 flex w-screen justify-center bg-black">
+    <div className="fixed top-0 z-10 flex w-screen justify-center bg-black">
       <div className="flex w-full max-w-7xl items-center justify-between p-3">
         <div>
           <Link href="/">
