@@ -29,6 +29,9 @@ const ContactForm = (): React.ReactElement => {
     } catch (error) {
       setRes(`fail`);
       setLoading(false);
+      setTimeout(() => {
+        setRes("unset");
+      }, 3000);
       console.error("Error submitting form:", error);
     }
   };

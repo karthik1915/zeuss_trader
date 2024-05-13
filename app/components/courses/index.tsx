@@ -26,7 +26,9 @@ function Courses(): React.ReactElement {
                   className=" flex max-w-xs gap-1 break-words text-sm md:text-lg"
                   key={index}
                 >
-                  <CrossHairIcon width={26} height={26} />
+                  <div className=" mt-1 h-4 w-4">
+                    <CrossHairIcon width={16} height={16} />
+                  </div>
                   {point}
                 </div>
               );
