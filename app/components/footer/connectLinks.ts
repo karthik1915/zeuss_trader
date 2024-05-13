@@ -3,18 +3,21 @@ import { ConnectLinkType } from ".";
 
 const connectLinkList: ConnectLinkType[] = [
   {
+    title: "Youtube",
     Icon: YoutTubeIcon,
     onClick: () => {
       window.open("https://youtube.com/@zeusstrader", "_blank");
     },
   },
   {
+    title: "Instagram",
     Icon: InstagramIcon,
     onClick: () => {
       window.open("https://www.instagram.com/zeuss_trader_", "_blank");
     },
   },
   {
+    title: "Gmail",
     Icon: GmailIcon,
     onClick: () => {
       const email = "zeusstrader@gmail.com";

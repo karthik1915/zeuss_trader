@@ -42,6 +42,7 @@ function Footer(): React.ReactElement {
             {connectLinkList.map((list, index) => {
               return (
                 <ConnectLink
+                  title={list.title}
                   key={index}
                   onClick={list.onClick}
                   Icon={list.Icon}
@@ -79,14 +80,16 @@ function Footer(): React.ReactElement {
 }
 
 export interface ConnectLinkType {
+  title: string;
   Icon: JSXElementConstructor<SVGProps<SVGSVGElement>>;
   onClick: () => void;
 }
 
-const ConnectLink = ({ onClick, Icon }: ConnectLinkType) => {
+const ConnectLink = ({ title, onClick, Icon }: ConnectLinkType) => {
   return (
     <button
       onClick={onClick}
+      title={title}
       className="rounded-full bg-gray-300 p-1 hover:bg-gray-400"
     >
       <Icon fill="black" width={34} height={34} />

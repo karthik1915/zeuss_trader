@@ -85,7 +85,7 @@ function SlidingMenu() {
             animate={{ x: 0 }}
             exit={{ x: "-100vw" }}
             transition={{ duration: 0.5 }}
-            className="fixed left-0 top-0 z-40 flex h-full w-[70vw] flex-col items-center bg-gray-200"
+            className="fixed left-0 top-0 z-50 flex h-full w-[70vw] flex-col items-center bg-gray-200"
           >
             <Image
               src="/logotext.png"

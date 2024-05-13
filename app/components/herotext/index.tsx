@@ -31,7 +31,7 @@ function HeroText(): React.ReactElement {
               <p className="text-lg sm:text-xl">4800+ markets</p>
             </div>
           </div>
-          <div className="z-10 flex  justify-center gap-2 sm:justify-start">
+          <div className="flex  justify-center gap-2 sm:justify-start">
             <EnquireButton />
           </div>
         </div>
